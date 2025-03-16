@@ -1,14 +1,17 @@
-ARG device
+ARG device="gpu"
 ARG username="jovyan"
 
-FROM ubuntu:18.04 AS base-cpu
-
-FROM nvidia/cuda:10.2-base-ubuntu18.04 AS base-gpu
+FROM nvcr.io/nvidia/cuda:10.2-base-ubuntu18.04 AS base-gpu
 
 FROM base-$device AS base
 
 ARG username
 ENV DEBIAN_FRONTEND=noninteractive
+
+
+RUN sed -i 's/archive.ubuntu.com/mirror.yandex.ru/g' /etc/apt/sources.list
+RUN sed -i 's/security.ubuntu.com/mirror.yandex.ru/g' /etc/apt/sources.list
+
 
 RUN apt-get -qq update && \
     apt-get install -y wget unzip git cmake xvfb sudo freeglut3-dev ffmpeg
@@ -57,9 +60,5 @@ RUN conda env create -f /tmp/deeplearning.yaml && \
 RUN sudo rm /tmp/deeplearning*.yaml
 
 EXPOSE 8888
-VOLUME /notebooks
 WORKDIR /notebooks
 ENV PATH /opt/conda/bin:$PATH
-
-COPY run_jupyter.sh /
-CMD ["/run_jupyter.sh"]

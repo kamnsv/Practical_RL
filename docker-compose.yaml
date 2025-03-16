@@ -1,0 +1,20 @@
+services:
+
+  api:
+    container_name: practical_rl
+    build: .
+    ports:
+      - ${APP_PORT:-8888}:8888
+    volumes:
+      - ./notebooks:/notebooks:rw
+    command: > 
+      jupyter notebook 
+      --no-browser --ip 0.0.0.0 
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]  
+

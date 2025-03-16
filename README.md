@@ -1,105 +1,104 @@
 # Practical_RL
 
-An open course on reinforcement learning in the wild.
-Taught on-campus at [HSE](https://cs.hse.ru) and [YSDA](https://yandexdataschool.com/)  and maintained to be friendly to online students (both english and russian).
+Открытый курс по обучению с подкреплением в условиях дикой природы.
+Проводится в кампусах [НИУ ВШЭ](https://cs.hse.ru) и [YSDA](https://yandexdataschool.com/) и поддерживается для удобства онлайн-студентов (как на английском, так и на русском языках).
 
 
 #### Manifesto:
-* __Optimize for the curious.__ For all the materials that aren’t covered in detail there are links to more information and related materials (D.Silver/Sutton/blogs/whatever). Assignments will have bonus sections if you want to dig deeper.
-* __Practicality first.__ Everything essential to solving reinforcement learning problems is worth mentioning. We won't shun away from covering tricks and heuristics. For every major idea there should be a lab that makes you to “feel” it on a practical problem.
-* __Git-course.__ Know a way to make the course better? Noticed a typo in a formula? Found a useful link? Made the code more readable? Made a version for alternative framework? You're awesome! [Pull-request](https://help.github.com/articles/about-pull-requests/) it!
+* __ Оптимизируйте для любопытных.__ Для всех материалов, которые не описаны подробно, есть ссылки на дополнительную информацию и сопутствующие материалы (Д.Сильвер / Саттон / блоги / что угодно). В заданиях будут дополнительные разделы, если вы захотите копнуть глубже.
+* Прежде всего, практичность.__ Стоит упомянуть все, что необходимо для решения задач обучения с подкреплением. Мы не будем уклоняться от описания приемов и эвристик. Для каждой важной идеи должна быть лаборатория, которая позволит вам “прочувствовать” ее на практической задаче.
+* __Git-курс.__ Знаете, как улучшить курс? Заметили опечатку в формуле? Нашли полезную ссылку? Сделали код более читабельным? Создали версию для альтернативного фреймворка? Вы великолепны! [Предварительный запрос](https://help.github.com/articles/about-pull-requests/) это!
 
 [![Github contributors](https://img.shields.io/github/contributors/yandexdataschool/Practical_RL.svg?logo=github&logoColor=white)](https://github.com/yandexdataschool/Practical_RL/graphs/contributors)
 
-# Course info
+# Информация о курсе
 
-* __FAQ:__ [About the course](https://github.com/yandexdataschool/Practical_RL/wiki/Practical-RL), [Technical issues thread](https://github.com/yandexdataschool/Practical_RL/issues/1), [Lecture Slides](https://yadi.sk/d/loPpY45J3EAYfU), [Online Student Survival Guide](https://github.com/yandexdataschool/Practical_RL/wiki/Online-student's-survival-guide)
+* __Часто задаваемые вопросы:__ [О курсе](https://github.com/yandexdataschool/Practical_RL/wiki/Practical-RL), [Раздел технических вопросов] (https://github.com/yandexdataschool/Practical_RL/issues/1), [Слайды лекций] (https://yadi.sk/d/loPpY45J3EAYfU), [Онлайн-руководство по выживанию для студентов] (https://github.com/yandexdataschool/Practical_RL/wiki/Online-student Руководство по выживанию для студентов).
 
-* Anonymous [feedback form](https://docs.google.com/forms/d/e/1FAIpQLSdurWw97Sm9xCyYwC8g3iB5EibITnoPJW2IkOVQYE_kcXPh6Q/viewform).
+* Анонимная [обратная связь form](https://docs.google.com/forms/d/e/1FAIpQLSdurWw97Sm9xCyYwC8g3iB5EibITnoPJW2IkOVQYE_kcXPh6Q/viewform).
 
-* Virtual course environment: 
-    * [__Google Colab__](https://colab.research.google.com/) - set open -> github -> yandexdataschool/pracical_rl -> {branch name} and select any notebook you want.
-    * [Installing dependencies](https://github.com/yandexdataschool/Practical_RL/issues/1) on your local machine (recommended).
-    * Alternative: [Azure Notebooks](https://notebooks.azure.com/).
+* Среда виртуального курса: 
+    * [__Google Colab__](https://colab.research.google.com/) - установите open -> github -> yandexdataschool/practical_rl -> {название филиала} и выберите любую записную книжку, которую вы хотите.
+    * [Установка зависимостей](https://github.com/yandexdataschool/Practical_RL/issues/1) на вашем локальном компьютере (рекомендуется).
+    * Альтернативный вариант: [Записные книжки Azure](https://notebooks.azure.com/).
 
 
-# Additional materials
+# Дополнительные материалы
 * [RL reading group](https://github.com/yandexdataschool/Practical_RL/wiki/RL-reading-group)
 
 
-# Syllabus
+# Программа
 
-The syllabus is approximate: the lectures may occur in a slightly different order and some topics may end up taking two weeks.
+Программа является приблизительной: лекции могут проходить в несколько ином порядке, а некоторые темы могут занять две недели.
 
-* [__week01_intro__](./week01_intro) Introduction
-  * Lecture: RL problems around us. Decision processes. Stochastic optimization, Crossentropy method. Parameter space search vs action space search.
-  * Seminar: Welcome into openai gym. Tabular CEM for Taxi-v0, deep CEM for box2d environments.
-  * Homework description - see week1/README.md. 
+* [__week01_intro__](./week01_intro) Введение
+  * Лекция: Проблемы RL вокруг нас. Процессы принятия решений. Стохастическая оптимизация, метод кроссэнтропии. Поиск в пространстве параметров против поиска в пространстве действий.
+  * Семинар: Добро пожаловать в openai gym. Табличный CEM для Taxi-v0, углубленный CEM для сред box2d.
+  * Описание домашнего задания - смотрите на week1/README.md. 
 
-* [__week02_value_based__](./week02_value_based) Value-based methods
-  * Lecture: Discounted reward MDP. Value-based approach. Value iteration. Policy iteration. Discounted reward fails.
-  * Seminar: Value iteration.  
-  * Homework description - see week2/README.md. 
+* [__week02_value_based__](./week02_value_based) Методы, основанные на ценности
+  * Лекция: MDP с дисконтированным вознаграждением. Подход, основанный на ценности. Итерация ценности. Итерация политики. Дисконтированное вознаграждение не выполняется.
+  * Семинар: Повторение значений.  
+  * Описание домашнего задания - смотрите на 2-й неделе/README.md. 
   
-* [__week03_model_free__](./week03_model_free) Model-free reinforcement learning
-  * Lecture: Q-learning. SARSA. Off-policy Vs on-policy algorithms. N-step algorithms. TD(Lambda).
-  * Seminar: Qlearning Vs SARSA Vs Expected Value SARSA
-  * Homework description - see week3/README.md. 
+* [__week03_model_free__](./week03_model_free) Обучение с подкреплением без использования моделей
+  * Лекция: Q-learning. SARSA. Алгоритмы, не связанные с политикой, и алгоритмы, основанные на политике. N-ступенчатые алгоритмы. TD (Лямбда).
+  * Семинар: Qlearning, SARSA и SARSA с ожидаемым значением
+  * Описание домашнего задания - смотрите на 3-й неделе/README.md. 
 
-* [__recap_deep_learning__](./week04_\[recap\]_deep_learning) - deep learning recap 
-  * Lecture: Deep learning 101
-  * Seminar: Intro to pytorch/tensorflow, simple image classification with convnets
+* [__краткое изложение _глубокого_обучения__](./week04_\[краткое изложение\]_deep_learning) - краткое изложение глубокого обучения 
+  * Лекция: Глубокое обучение 101
+  * Семинар: Знакомство с pytorch/tensorflow, простая классификация изображений с помощью convnets
 
-* [__week04_approx_rl__](./week04_approx_rl) Approximate (deep) RL
-  * Lecture: Infinite/continuous state space. Value function approximation. Convergence conditions. Multiple agents trick; experience replay, target networks, double/dueling/bootstrap DQN, etc.
-  * Seminar:  Approximate Q-learning with experience replay. (CartPole, Atari)
+* [__week04_approx_rl__](./week04_approx_rl) Приблизительный (глубокий) RL
+  * Лекция: Бесконечное / непрерывное пространство состояний. Аппроксимация функции значений. Условия конвергенции. Трюк с несколькими агентами; воспроизведение опыта, целевые сети, двойные / дуэльные / загрузочные DQN и т.д.
+  * Семинар:  Приблизительное Q-обучение с воспроизведением опыта. (CartPole, Atari)
   
-* [__week05_explore__](./week05_explore) Exploration
-  * Lecture: Contextual bandits. Thompson Sampling, UCB, bayesian UCB. Exploration in model-based RL, MCTS. "Deep" heuristics for exploration.
-  * Seminar: bayesian exploration for contextual bandits. UCB for MCTS.
+* [__week05_explore__](./week05_explore) Исследование
+  * Лекция: Контекстуальные бандиты. Выборка Томпсона, UCB, байесовский UCB. Исследование в RL на основе моделей, MCTS. "Глубокая" эвристика для исследования.
+  * Семинар: байесовское исследование для контекстуальных бандитов. UCB для MCTS.
 
-* [__week06_policy_based__](./week06_policy_based) Policy Gradient methods
-  * Lecture: Motivation for policy-based, policy gradient, logderivative trick, REINFORCE/crossentropy method, variance reduction(baseline), advantage actor-critic (incl. GAE)
-  * Seminar: REINFORCE, advantage actor-critic
+* [__неделя 06_на основе политики__](./неделя 06_ на основе политики) Методы градиента политики
+  * Лекция: Мотивация на основе политики, градиент политики, логарифмический прием, метод УСИЛЕНИЯ/кроссэнтропии, уменьшение дисперсии (базовый уровень), субъект-критик преимуществ (вкл. GAE)
+  * Семинар: УСИЛЕНИЕ, субъект-критик преимуществ
 
-* [__week07_seq2seq__](./week07_seq2seq) Reinforcement Learning for Sequence Models
-  * Lecture: Problems with sequential data. Recurrent neural networks. Backprop through time. Vanishing & exploding gradients. LSTM, GRU. Gradient clipping
-  * Seminar: character-level RNN language model
+* [__week07_seq2seq__](./week07_seq2seq) Обучение с подкреплением для последовательных моделей
+  * Лекция: Проблемы с последовательными данными. Рекуррентные нейронные сети. Обратная обработка во времени. Исчезающие и взрывающиеся градиенты. LSTM, GRU. Обрезка градиента
+  * Семинар: модель языка RNN на уровне символов
 
-* [__week08_pomdp__](./week08_pomdp) Partially Observed MDP
-  * Lecture: POMDP intro. POMDP learning (agents with memory). POMDP planning (POMCP, etc)
-  * Seminar: Deep kung-fu & doom with recurrent A3C and DRQN
+* [__week08_pomdp__](./week08_pomdp) Частично соблюденный MDP
+  * Лекция: Введение в POMDP. Обучение POMDP (агенты с памятью). Планирование POMDP (POMCP и т.д.)
+  * Семинар: Глубокое кунг-фу и doom с повторяющимися A3C и DRQN
   
-* [__week09_policy_II__](./week09_policy_II) Advanced policy-based methods
-  * Lecture: Trust region policy optimization. NPO/PPO. Deterministic policy gradient. DDPG
-  * Seminar: Approximate TRPO for simple robot control.
+* [__week09_policy_II__](./week09_policy_II) Усовершенствованные методы, основанные на политике
+  * Лекция: Оптимизация политики в регионе доверия. NPO/PPO. Детерминированный градиент политики. DDPG
+  * Семинар: Приблизительный TRPO для простого управления роботом.
 
-* [__week10_planning__](./week10_planning) Model-based RL & Co
-  * Lecture: Model-Based RL, Planning in General, Imitation Learning and Inverse Reinforcement Learning
-  * Seminar: MCTS for toy tasks
+* [__week10_planning__](./week10_planning) RL & Co на основе моделей
+  * Лекция: RL на основе моделей, планирование в целом, Имитационное обучение и обучение с обратным подкреплением
+  * Семинар: MCTS для игрушечных заданий
 
-* [__yet_another_week__](./yet_another_week) Inverse RL and Imitation Learning
-  * All that cool RL stuff that you won't learn from this course :)
+* [__еще_одна_неделя__](./еще _ одна_ неделя) Обратное обучение RL и имитационное обучение
+  * Все те классные вещи, которые вы не узнаете из этого курса :)
 
 
-# Course staff
-Course materials and teaching by: _[unordered]_
-- [Pavel Shvechikov](https://github.com/pshvechikov) - lectures, seminars, hw checkups, reading group
-- [Nikita Putintsev](https://github.com/qwasser) - seminars, hw checkups, organizing our hot mess
-- [Alexander Fritsler](https://github.com/Fritz449) - lectures, seminars, hw checkups
-- [Oleg Vasilev](https://github.com/Omrigan) - seminars, hw checkups, technical support
-- [Dmitry Nikulin](https://github.com/pastafarianist) - tons of fixes, far and wide
-- [Mikhail Konobeev](https://github.com/MichaelKonobeev) - seminars, hw checkups
-- [Ivan Kharitonov](https://github.com/neer201) - seminars, hw checkups
-- [Ravil Khisamov](https://github.com/zshrav) - seminars, hw checkups
-- [Anna Klepova](https://github.com/q0o0p) - hw checkups
-- [Fedor Ratnikov](https://github.com/justheuristic) - admin stuff
+# Сотрудники курса
+Учебные материалы и методические рекомендации: _[неупорядоченные]_
+- [Павел Швечиков](https://github.com/pshvechikov) - лекции, семинары, профилактические осмотры, читательская группа
+- [Никита Путинцев](https://github.com/qwasser) - семинары, профилактические осмотры, организация нашей горячей вечеринки
+- [Александр Фрицлер](https://github.com/Fritz449) - лекции, семинары, проверки работоспособности
+- [Олег Васильев](https://github.com/Omrigan) - семинары, проверки работоспособности, техническая поддержка
+- [Дмитрий Никулин](https://github.com/pastafarianist) - множество исправлений по всему миру
+- [Михаил Конобеев](https://github.com/MichaelKonobeev) - семинары, медицинские осмотры
+- [Иван Харитонов](https://github.com/neer201) - семинары, медицинские осмотры
+- [Равиль Хисамов](https://github.com/zshrav) - семинары, медицинские осмотры
+- [Анна Клепова](https://github.com/q0o0p) - медицинские осмотры
+- [Федор Ратников](https://github.com/justheuristic) - администраторский состав
 
-# Contributions
-* Using pictures from [Berkeley AI course](http://ai.berkeley.edu/home.html)
-* Massively refering to [CS294](http://rll.berkeley.edu/deeprlcourse/)
-* Several tensorflow assignments by [Scitator](https://github.com/Scitator)
-* A lot of fixes from [arogozhnikov](https://github.com/arogozhnikov)
-* Other awesome people: see github [contributors](https://github.com/yandexdataschool/Practical_RL/graphs/contributors)
-* [Alexey Umnov](https://github.com/alexeyum) helped us a lot during spring2018
-
+# Материалы
+* Использованы картинки из [курса искусственного интеллекта в Беркли](http://ai.berkeley.edu/home.html)
+* Многочисленные ссылки на [CS294](http://rll.berkeley.edu/deeprlcourse/)
+* Несколько заданий tensorflow от [Scitator](https://github.com/Scitator)
+* Много исправлений от [арогожникова](https://github.com/arogozhnikov)
+* Другие замечательные люди: смотрите на github [авторы](https://github.com/yandexdataschool/Practical_RL/graphs/contributors)
+* [Алексей Умнов](https://github.com/alexeyum) очень помогли нам весной 2018 года

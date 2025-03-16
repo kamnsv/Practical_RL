@@ -6,7 +6,7 @@ dependencies:
   - python-graphviz
   - ipykernel
   - keras
-  - numpy=1.16.6
+  - numpy
   - pip
   - scipy
   - {tensorflow}=1.13.1
@@ -17,7 +17,7 @@ dependencies:
   - opencv
   - pip:
     - atari-py
-    - sklearn
+    - scikit-learn
     - matplotlib
     - seaborn
     - scikit-image
@@ -28,5 +28,7 @@ dependencies:
     - gym[box2d]
     - gym[atari]
     - requests
+    - gymnasium
     - editdistance
+    - moviepy
 prefix: /opt/conda/envs/deeplearning
