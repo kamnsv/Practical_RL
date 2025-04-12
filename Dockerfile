@@ -1,64 +1,31 @@
-ARG device="gpu"
-ARG username="jovyan"
+FROM python:3.7-slim
+RUN rm -rf /etc/apt/sources.list.d/*
+RUN rm -rf /var/lib/apt/lists/*
+RUN echo "deb http://mirror.yandex.ru/debian bookworm main contrib non-free\n\
+deb-src http://mirror.yandex.ru/debian bookworm main contrib non-free\n\
+deb http://mirror.yandex.ru/debian bookworm-updates main contrib non-free\n\
+deb-src http://mirror.yandex.ru/debian bookworm-updates main contrib non-free\n\
+deb https://mirror.yandex.ru/debian-security bookworm-security main contrib non-free\n\
+deb-src https://mirror.yandex.ru/debian-security bookworm-security main contrib non-free" > /etc/apt/sources.list
 
-FROM nvcr.io/nvidia/cuda:10.2-base-ubuntu18.04 AS base-gpu
+RUN apt clean && rm -rf /var/lib/apt/lists/* && \
+    apt update --fix-missing
 
-FROM base-$device AS base
+RUN apt install -y \
+    libgl1-mesa-glx \
+    libsm6 \
+    libxext6 \
+    libxrender-dev \
+    libx265-dev \
+    libavcodec-extra \
+    x265 \
+    libgraphviz-dev \
+    graphviz \
+    ffmpeg && \
+    apt-get clean && apt-get autoclean
 
-ARG username
-ENV DEBIAN_FRONTEND=noninteractive
+COPY requirements.txt requirements.txt
+RUN pip install pip -U ;\
+    pip install --no-cache-dir -r requirements.txt
 
-
-RUN sed -i 's/archive.ubuntu.com/mirror.yandex.ru/g' /etc/apt/sources.list
-RUN sed -i 's/security.ubuntu.com/mirror.yandex.ru/g' /etc/apt/sources.list
-
-
-RUN apt-get -qq update && \
-    apt-get install -y wget unzip git cmake xvfb sudo freeglut3-dev ffmpeg
-
-RUN adduser --disabled-password --gecos "Default user" $username && \
-    adduser $username sudo && \
-    echo "%sudo ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers && \
-    mkdir /notebooks && \
-    chown -R $username /notebooks
-
-RUN su $username -c \
-    "wget https://repo.anaconda.com/archive/Anaconda3-2020.02-Linux-x86_64.sh \
-        -O /tmp/anaconda3.sh" && \
-    mkdir -p /opt/conda && \
-    chown -R $username /opt/conda && \
-    su $username -c "/bin/bash /tmp/anaconda3.sh -b -p /opt/conda -u" && \
-    rm /tmp/anaconda3.sh && \
-    ln -s /opt/conda/etc/profile.d/conda.sh /etc/profile.d/conda.sh && \
-    su $username -c "echo '. /opt/conda/etc/profile.d/conda.sh' >> ~/.bashrc" && \
-    su $username -c "echo 'conda activate base' >> ~/.bashrc"
-
-ADD deeplearning.yaml /tmp/deeplearning-template.yaml
-
-USER $username
-SHELL ["/bin/bash", "-i", "-c"]
-RUN conda install -y jupyter
-
-FROM base AS stage-cpu
-RUN sed -e "s/{tensorflow}/tensorflow/g" -e "s/{pytorch}/pytorch/g" /tmp/deeplearning-template.yaml > /tmp/deeplearning.yaml
-
-FROM base AS stage-gpu
-RUN sed -e "s/{tensorflow}/tensorflow-gpu/g" -e "s/{pytorch}/pytorch-gpu/g" /tmp/deeplearning-template.yaml > /tmp/deeplearning.yaml
-
-FROM stage-$device as final
-
-LABEL maintainer "Alexander Panin <justheuristic@gmail.com>, Dmitry Mittov <mittov@gmail.com>"
-
-ARG username
-USER $username
-SHELL ["/bin/bash", "-i", "-c"]
-
-RUN conda env create -f /tmp/deeplearning.yaml && \
-    conda activate deeplearning && \
-    python -m ipykernel install --user --name python3 --display-name "Python 3"
-
-RUN sudo rm /tmp/deeplearning*.yaml
-
-EXPOSE 8888
 WORKDIR /notebooks
-ENV PATH /opt/conda/bin:$PATH
