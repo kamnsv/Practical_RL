@@ -7,11 +7,11 @@ services:
       - ${APP_PORT:-8888}:8888
     volumes:
       - ./notebooks:/notebooks:rw
-    command: > 
-      jupyter notebook 
+    command: jupyter lab
       --no-browser 
       --ip 0.0.0.0 
       --allow-root
+      --NotebookApp.token=''
     deploy:
       resources:
         reservations:
