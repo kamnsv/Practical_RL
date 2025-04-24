@@ -1,2 +1,1 @@
-
-This seminar was in Practical RL course several years ago. It has some neat RL problems with cool visualizations. This assignment borrows code from awesome [cs188 course](http://ai.berkeley.edu/project_overview.html)
+Этот семинар проходил в рамках практического курса RL несколько лет назад. В нем есть несколько интересных задач по RL с классной визуализацией. Это задание позаимствовано из потрясающего курса [cs188](http://ai.berkeley.edu/project_overview.html)

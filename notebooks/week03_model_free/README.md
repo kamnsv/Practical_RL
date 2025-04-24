@@ -1,21 +1,21 @@
-#### __Lecture slides__ - [here](https://yadi.sk/i/9bPN0pxsR1-zIA)
-### Materials
-* Russian materials:
-   - Lecture - [video](https://yadi.sk/i/jcQ1Bg8n3SrhuQ)
-   - Seminars
-      - Q-learning seminar - [video](https://yadi.sk/i/dQmolwOy3EtGNK) (older track - [assignment](./crawler_and_pacman/seminar_py2))
-      - SARSA & stuff - [video](https://yadi.sk/i/XbqNQmjm3ExNsq)
-* English materials:
-   - Lecture by David Silver (english) - [video part I](https://www.youtube.com/watch?v=PnHCvfgC_ZA), [video part II](https://www.youtube.com/watch?v=0g4j2k_Ggc4&t=43s)
-   - Alternative lecture by Pieter Abbeel (english) - [video](https://www.youtube.com/watch?v=ifma8G7LegE)
-   - Alternative lecture by John Schulmann (english) - [video](https://www.youtube.com/watch?v=IL3gVyJMmhg)
-   - Blog post on q-learning Vs SARSA - [url](https://studywolf.wordpress.com/2013/07/01/reinforcement-learning-sarsa-vs-q-learning/)
+#### __Слайды лекций__ - [здесь](https://yadi.sk/i/9bPN0pxsR1-zIA)
+### Материалы
+* Материалы на русском языке:
+   - Лекция - [видео](https://yadi.sk/i/jcQ1Bg8n3SrhuQ)
+   - Семинары
+      - Q-обучающий семинар - [видео](https://yadi.sk/i/dQmolwOy3EtGNK) (более старый трек - [задание](./crawler_and_pacman/seminar_py2))
+      - SARSA & stuff - [видео](https://yadi.sk/i/XbqNQmjm3ExNsq)
+* Материалы на английском языке:
+   - Лекция Дэвида Сильвера (на английском языке) - [видео часть I](https://www.youtube.com/watch?v=PnHCvfgC_ZA), [видео часть II](https://www.youtube.com/watch?v=0g4j2k_Ggc4&t=43s)
+   - Альтернативная лекция Питера Эббила (на английском языке) - [видео](https://www.youtube.com/watch?v=ifma8G7LegE)
+   - Альтернативная лекция Джона Шульмана (на английском языке) - [видео](https://www.youtube.com/watch?v=IL3gVyJMmhg)
+   - Запись в блоге о q-learning Vs SARSA - [url](https://studywolf.wordpress.com/2013/07/01/reinforcement-learning-sarsa-vs-q-learning/)
 
-### More materials
-* N-step temporal difference from Sutton's book - [suttonbook](http://incompleteideas.net/book/RLbook2018.pdf) __chapter 7__
-* Eligibility traces from Sutton's book - [suttonbook](http://incompleteideas.net/book/RLbook2018.pdf) __chapter 12__
-* Blog post on eligibility traces - [url](http://pierrelucbacon.com/traces/)
+### Дополнительные материалы
+* Разница во времени в N шагов от книги Саттон - [suttonbook](http://incompleteideas.net/book/RLbook2018.pdf) __глава 7__
+* Ссылки на соответствие требованиям из книги Саттон - [suttonbook](http://incompleteideas.net/book/RLbook2018.pdf) __глава 12__
+* Запись в блоге о ссылках на соответствие требованиям - [url](http://pierrelucbacon.com/traces/)
 
-### Assignments
+### Задания
 
-Just as usual, start with `homework.ipynb` [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/yandexdataschool/Practical_RL/blob/master/week03_model_free/homework.ipynb) For seminar, implement q-learning agent and test it on Taxi and CartPole with binarizer. And then, implement EV-SARSA agent, experience replay + bonus tasks for homework.
+Как обычно, начните с "homework.ipynb" [![Открыто в Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/yandexdataschool/Practical_RL/blob/master/week03_model_free/homework.ipynb) Для семинара внедрите q-learning agent и протестируйте его на Taxi и CartPole с помощью binarizer. А затем внедрите EV-SARSA agent, получите опыт воспроизведения + бонусные задания для домашней работы.
